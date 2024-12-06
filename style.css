@@ -127,10 +127,22 @@ nav .logo {
     margin: auto;
 }
 
-.logo#logo img {
+.logo#logo a svg {
     width: auto;
     height: 20px;
   }
+
+svg{
+    /* background-color: #000  ; */
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    size: 20px;
+    /* color: #fff; */
+}
+.fill-white{
+    fill: #fff;
+}
 
 nav .links {
     float: right;
@@ -204,8 +216,8 @@ nav .icon-burger .line {
     transition: all .3s ease-in-out;
 }
 
-#a {
-    background-image: url(img/suitman.jpg);
+#Home {
+    background-image: url(img/suitman.webp);
     /* -webkit-filter: grayscale(100%); */
     height: 100vh;
     width: 100%;
@@ -214,15 +226,15 @@ nav .icon-burger .line {
     background-position: center; 
 }
 
-#b {
-    background: url(img/Screenshot2.png);
+#About {
+    background: url(img/Screenshot2.webp);
     height: 100vh;
     width: auto;
     background-size: cover;
     background-position: center;
 }
 
-#c {
+#Vehicles {
     background: url(img/home_illustriation2_d.webp);
     height: 100vh;
     width: 100%;
@@ -897,7 +909,7 @@ button[type="submit"]:hover{
 
 @media only screen and (max-width: 700px){
     
-    #a {
+    #Home {
         background-image: url(img/suitman1.png);
         height: 100vh;
         width: 100%;
