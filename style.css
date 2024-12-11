@@ -417,9 +417,212 @@ nav .icon-burger .line {
 /* SLIDER Start */  
 
 
+.slider {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: hidden;
+    background-color: #000;
+    /* padding-bottom: 100px; */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%; /* Full height for slides */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex; /* Use flexbox for the slide */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the content vertically */
+    height: 100%; /* Full height for each slide */
+}
+
+.content {
+    display: flex; /* Flexbox for the two divs */
+    justify-content: space-between; /* Space between the two divs */
+    width: 100%; /* Full width */
+    padding: 20px; /* Padding for the content */
+    box-sizing: border-box; /* Include padding in width */
+}
 
 
 
+
+
+.nav-container {
+    position: absolute;
+    bottom: 20px; /* Position buttons at the bottom */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space between buttons and indicators */
+    align-items: center; /* Center vertically */
+}
+
+.indicators {
+    display: flex; /* Use flexbox for indicators */
+    justify-content: center; /* Center indicators */
+    flex-grow: 1; /* Allow indicators to take available space */
+    margin: 0 20px; /* Add margin to separate from buttons */
+}
+
+.prev, .next {
+  background-color: #00000000;  
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  /* font-size: 24px; Increase the font size to increase the SVG size */
+  /* border-radius: 5px; Optional: Add rounded corners to buttons */
+}
+
+button svg{
+    height: 25px;
+    width: 30px;
+}
+
+.prev{
+    margin-left: 50px;
+}
+.next{
+    margin-right: 50px;
+}
+.prev svg path,
+.next svg path{
+    transition: 0.2s linear;
+}
+.indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: #535353;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.indicator.active {
+    background-color: #fff;
+}
+
+.slide:nth-child(1){
+    background: url(/./img/Screenshot2.webp);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide:nth-child(2){
+    background: url(/./img/WebsiteFHFairings_Lines_Desktop.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide:nth-child(3){
+    background: url(/./img/DragonTrunk_Lines_Desktop.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide:nth-child(4){
+    background: url(/./img/WebsiteStarship_Render_Desktop.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.content .box:nth-child(2){
+    opacity: 0;
+}
+
+.box {
+    background-color: #d9ff0000; /* Blue background */
+    color: white; /* White text */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1; /* Flex-grow to take equal space */
+    margin: 0 10px; 
+    right: 47.588579795021962vw;
+    /* margin-top: 25vh; */
+    /* text-align: justify; */
+    position: relative;
+    left: 6.588579795021962vw;
+    text-align: justify;
+    padding: 20px 20px;
+    /* text-align: center; Center text */
+    /* margin-left: 50px; */
+    /* font-family: 'D-DIN-BOLD'; */
+}
+.texthead{
+    font-family: 'D-DIN-BOLD';
+    font-size: 35px;
+    margin-bottom: 20px;
+    /* font-size:; */
+}
+.textdetails{
+    font-family: 'D-DIN-MEDIUM';
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 880px) {
+    .content {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+    .content .box:nth-child(2){
+        display: none;
+    }
+
+    .prev{
+        margin-left: 20px;
+    }
+    .next{
+        margin-right: 20px;
+    }
+    div.nav-container{
+        margin-bottom: 50px;
+    }
+    .box {
+        background-color: #d9ff0000; /* Blue background */
+        color: white; /* White text */
+        padding: 20px; /* Padding inside the box */
+        border-radius: 5px; /* Rounded corners */
+        flex: 1; /* Flex-grow to take equal space */
+        /* margin: 0 10px;  */
+       
+        /* margin-top: 25vh; */
+        /* text-align: justify; */
+        position: relative;
+        left: 0.288579795021962vw;
+        /* text-align: justify; */
+        /* padding: 20px 20px; */
+        align-items: center;
+        /* text-align: center; Center text */
+        /* margin-left: 50px; */
+        /* font-family: 'D-DIN-BOLD'; */
+    }
+    .texthead{
+        font-family: 'D-DIN-BOLD';
+        font-size: 25px;
+        margin-bottom: 20px;
+        /* font-size:; */
+    }
+    .textdetails{
+        font-family: 'D-DIN-MEDIUM';
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+}
 
 /* SLIDER End */
 .sec-5{
