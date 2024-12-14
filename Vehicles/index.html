@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX - Falcon 9</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/d-din" type="text/css"/>
+
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+    </div>
+
+    <nav class="nav">
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo" href="i" id="logo">
+            <a href="/../index.html" target="_blank">
+                <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 50" aria-hidden="true">
+                    <title>SpaceX Logo</title>
+                    <g class="letter_s">
+                      <path class="fill-white" d="M37.5,30.5H10.9v-6.6h34.3c-0.9-2.8-3.8-5.4-8.9-5.4H11.4c-5.7,0-9,2.1-9,6.7v4.9c0,4,3.4,6.3,8.4,6.3h26.9v7H1.5
+                      c0.9,3.8,3.8,5.8,9,5.8h27.1c5.7,0,8.5-2.2,8.5-6.9v-4.9C46.1,33.1,42.8,30.8,37.5,30.5z"></path>
+                    </g>
+                    <g class="letter_p">
+                      <path class="fill-white" d="M91.8,18.6H59v30.7h9.3V37.5h24.2c6.7,0,10.4-2.3,10.4-7.7v-3.4C102.8,21.4,98.6,18.6,91.8,18.6z M94.8,28.4
+                      c0,2.2-0.4,3.4-4,3.4H68.3l0.1-8h22c4,0,4.5,1.2,4.5,3.3V28.4z"></path>
+                    </g>
+                    <g class="letter_a">
+                      <polygon class="fill-white" points="129.9,17.3 124.3,24.2 133.8,37.3 114,37.3 109.1,42.5 137.7,42.5 142.6,49.3 153.6,49.3 	"></polygon>
+                    </g>
+                    <g class="letter_c">
+                      <path class="fill-white" d="M171.4,23.9h34.8c-0.9-3.6-4.4-5.4-9.4-5.4h-26c-4.5,0-8.8,1.8-8.8,6.7v17.2c0,4.9,4.3,6.7,8.8,6.7h26.3
+                      c6,0,8.1-1.7,9.1-5.8h-34.8V23.9z"></path>
+                    </g>
+                    <g class="letter_e">
+                      <polygon class="fill-white" points="228.3,43.5 228.3,34.1 247,34.1 247,28.9 218.9,28.9 218.9,49.3 260.4,49.3 260.4,43.5 	"></polygon>
+                      <rect class="fill-white" x="219.9" y="18.6" width="41.9" height="5.4"></rect>
+                    </g>
+                    <g class="letter_x">
+                      <path class="fill-white" d="M287.6,18.6H273l17.2,12.6c2.5-1.7,5.4-3.5,8-5L287.6,18.6z"></path>
+                      <path class="fill-white" d="M308.8,34.3c-2.5,1.7-5,3.6-7.4,5.4l13,9.5h14.7L308.8,34.3z"></path>
+                    </g>
+                    <g class="letter_swoosh">
+                      <path class="fill-white" d="M399,0.7c-80,4.6-117,38.8-125.3,46.9l-1.7,1.6h14.8C326.8,9.1,384.3,2,399,0.7L399,0.7z"></path>
+                    </g>
+                  </svg>
+            </a>
+        </div>
+        <ul class="links">
+            <li><a href="../Falcon-9/index.html" data-aos="fade-up" data-aos-delay="1450">FALCON 9</a></li>
+            <li><a href="../Falcon-Heavy/index.html" data-aos="fade-up" data-aos-delay="1500">FALCON HEAVY</a></li>
+            <li><a href="../Dragon/index.html" data-aos="fade-up" data-aos-delay="1550">DRAGON</a></li>
+            <li><a href="../Starship/index.html" data-aos="fade-up" data-aos-delay="1550">STARSHIP</a></li>
+            <li><a href="#Contact" data-aos="fade-up" data-aos-delay="1600" >CONTACT</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+
+    <div id="Home">
+        <div class="texta">
+          <div class="texta2" data-aos="fade-up" data-aos-delay="1450">FALCON HEAVY</div>
+          <div class="texta1" data-aos="fade-up" data-aos-delay="1350" style="text-transform: uppercase;">Over 5 Million Lbs of Thrust</div>
+        </div>
+    </div>
+
+    <div id="Vehicles" class="sticky">
+      <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <div class="content">
+                    <div class="box">
+                      <div class="boxtext textvehicle" data-aos="fade-right" data-aos-delay="150">
+                        FALCON 9
+                     </div>
+                      <div class="boxtext texthead" data-aos="fade-right" data-aos-delay="150">
+                        OVERVIEW
+                      </div>
+                      <!-- <div class="boxtext textdetails" data-aos="fade-right" data-aos-delay="200">
+                        Falcon 9 is a reusable, two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of people and payloads into Earth orbit and beyond. Falcon 9 is the world’s first orbital class reusable rocket. Reusability allows SpaceX to refly the most expensive parts of the rocket, which in turn drives down the cost of space access.
+                      </div> -->
+                      <div class="table-container">
+                        <table>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">Height</td>
+                                <td>70 m <span>/ 229.6 ft</span></td>
+                            </tr>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">Width</td>
+                                <td>12.2 m <span>/ 39.9 ft</span></td>
+                            </tr>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">Mass</td>
+                                <td>1,420,788 kg <span>/ 3,125,735 lb</span></td>
+                            </tr>
+                            <tr data-aos="fade-right" data-aos-delay="150"> 
+                                <td class="label">Payload to LEO</td>
+                                <td>63,800 kg <span>/ 140,660 lb</span></td>
+                            </tr>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">Payload to GTO</td>
+                                <td>26,700 kg <span>/ 58,860 lb</span></td>
+                            </tr>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">Payload to Mars</td>
+                                <td>16,800 kg <span>/ 37,040 lb</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                    <div class="box">Content 1B</div>
+                </div>
+            </div>
+            <div class="slide" id="backgroundDiv">
+                <div class="content">
+                    <div class="box">
+                      <div class="boxtext textvehicle" data-aos="fade-right" data-aos-delay="150">
+                        ENGINES
+                     </div>
+                      <div class="boxtext texthead" data-aos="fade-right" data-aos-delay="150">
+                        MERLIN
+                      </div>
+                      <div class="toggle-buttons" data-aos="fade-right" data-aos-delay="150">
+                        <button id="seaLevelButton" class="active">SEA LEVEL</button>
+                        <button id="vacuumButton">VACUUM</button>
+                      </div>
+                      <div id="seaLevelcontentt" class="active contentt">
+                        <div class="boxtext textdetails1" data-aos="fade-right" data-aos-delay="200">
+                        Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9 and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally designed for recovery and reuse.
+                        </div>
+                        <div class="table-container">
+                          <table>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">PROPELLANT</td>
+                                <td>LOX <span>/ RP-1</span></td>
+                            </tr>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">THRUST</td>
+                                <td>845 kN <span>/ 190,000 lbf</span></td>
+                            </tr>
+                            
+                          </table>
+                        </div>
+                      </div>
+                      <div id="vacuumcontentt" class="contentt">
+                        <div class="boxtext textdetails1" data-aos="fade-right" data-aos-delay="150">
+                          Merlin Vacuum features a larger exhaust section and a significantly larger expansion nozzle to maximize the engine’s efficiency in the vacuum of space. Its combustion chamber is regeneratively cooled, while the expansion nozzle is radiatively cooled. At full power, the Merlin Vacuum engine operates with the greatest efficiency ever for an American-made hydrocarbon rocket engine
+                        </div>
+                        <div class="table-container">
+                          <table>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">PROPELLANT</td>
+                                <td>LOX <span>/ RP-1</span></td>
+                            </tr>
+                            <tr data-aos="fade-right" data-aos-delay="150">
+                                <td class="label">THRUST</td>
+                                <td>981 kN <span>/ 220,500 lbf</span></td>
+                            </tr>
+                            
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="box">Content 2B</div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="nav-container">
+            <button class="prev" onclick="changeSlide(-1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+                <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z" transform="translate(6) rotate(90)" fill="#fff"></path>
+              </svg>
+            </button>
+            <div class="indicators">
+                <span class="indicator active" onclick="setSlide(0)"></span>
+                <span class="indicator" onclick="setSlide(1)"></span>
+            </div>
+            <button class="next" onclick="changeSlide(1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+                <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z" transform="translate(0 10) rotate(-90)" fill="#fff"></path>
+              </svg> 
+            </button>
+        </div>
+    </div>
+    
+    
+    
+        
+    </div>
+
+
+    <div class="scrollme">
+      <svg width="30px" height="20px" aria-label="more content below">
+        <path 
+          d="M2.000,5.000 L15.000,18.000 L28.000,5.000" 
+          stroke="#ffffff" 
+          stroke-width="2" 
+          fill="none" 
+        />
+      </svg>
+    </div>
+    <!-- <div class="scrollme2">
+      <svg width="30px" height="20px" aria-label="more content below">
+        <path 
+          d="M2.000,5.000 L15.000,18.000 L28.000,5.000" 
+          stroke="#ffffff" 
+          stroke-width="2" 
+          fill="none" 
+        />
+      </svg>
+    </div> -->
+    <div class="scrollme3">
+      <svg width="30px" height="20px" aria-label="more content below" style="z-index: 10;">
+        <path 
+          d="M2.000,5.000 L15.000,18.000 L28.000,5.000" 
+          stroke="#ffffff" 
+          stroke-width="2" 
+          fill="none" 
+        />
+      </svg>
+    </div>
+
+    <!-- <div id="About">
+        <div class="textb">
+            <div class="textb1" data-aos="fade-up" data-aos-delay="150">SPACEX</div>
+            <div class="textb2" data-aos="fade-up" data-aos-delay="150">SpaceX is more than just a company - it's a vision for the future of humanity. Founded by Elon Musk in 2002, our mission is to make humanity a multi-planetary species by reducing space transportation costs and enabling the colonization of Mars. We believe that becoming a multi-planetary species is essential for the survival and progress of humanity, and we're committed to making it a reality.</div>
+        </div>
+        
+    </div> -->
+
+    <!-- <div id="Vehicles">
+      <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <div class="content">
+                    <div class="box">
+                      <div class="boxtext texthead" data-aos="fade-right" data-aos-delay="150">
+                        FALCON 9
+                      </div>
+                      <div class="boxtext textdetails" data-aos="fade-right" data-aos-delay="200">
+                        Falcon 9 is a reusable, two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of people and payloads into Earth orbit and beyond. Falcon 9 is the world’s first orbital class reusable rocket. Reusability allows SpaceX to refly the most expensive parts of the rocket, which in turn drives down the cost of space access.
+                      </div>
+                      <div data-aos="fade-right" data-aos-delay="250" class="c5">
+                        <a href="#" target="_blank">
+                          READ MORE
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box">Content 1B</div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <div class="box">
+                      <div class="boxtext texthead" data-aos="fade-right" data-aos-delay="150">
+                        FALCON HEAVY
+                      </div>
+                      <div class="boxtext textdetails" data-aos="fade-right" data-aos-delay="200">
+                        Falcon Heavy is composed of three reusable Falcon 9 nine-engine cores whose 27 Merlin engines together generate more than 5 million pounds of thrust at liftoff, equal to approximately eighteen 747 aircraft. As one of the world’s most powerful operational rockets, Falcon Heavy can lift nearly 64 metric tons (141,000 lbs) to orbit.
+                      </div>
+                      <div data-aos="fade-right" data-aos-delay="250" class="c5">
+                        <a href="#" target="_blank">
+                          READ MORE
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box">Content 2B</div>
+                </div>
+            </div>
+            <div class="slide"> 
+                <div class=" content">
+                    <div class="box">
+                      <div class="boxtext texthead" data-aos="fade-right" data-aos-delay="150">
+                        DRAGON
+                      </div>
+                      <div class="boxtext textdetails" data-aos="fade-right" data-aos-delay="200">
+                        The Dragon spacecraft is capable of carrying up to 7 passengers to and from Earth orbit, and beyond. It is the only spacecraft currently flying that is capable of returning significant amounts of cargo to Earth, and is the first private spacecraft to take humans to the space station.
+                      </div>
+                      <div data-aos="fade-right" data-aos-delay="250" class="c5">
+                        <a href="#" target="_blank">
+                          READ MORE
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box">Content 3B</div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <div class="box">
+                      <div class="boxtext texthead" data-aos="fade-right" data-aos-delay="150">
+                        STARSHIP
+                      </div>
+                      <div class="boxtext textdetails" data-aos="fade-right" data-aos-delay="200">
+                        Starship is the fully reusable spacecraft and second stage of the Starship system. The vehicle comes in several different configurations, offers an integrated payload section and is capable of carrying crew and cargo to Earth orbit, the Moon, Mars and beyond. Starship is also capable of point-to-point transport on Earth, enabling travel to anywhere in the world in one hour or less.
+                      </div>
+                      <div data-aos="fade-right" data-aos-delay="250" class="c5">
+                        <a href="#" target="_blank">
+                          READ MORE
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box">Content 4B</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-container">
+            <button class="prev" onclick="changeSlide(-1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+                <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z" transform="translate(6) rotate(90)" fill="#fff"></path>
+              </svg>
+            </button>
+            <div class="indicators">
+                <span class="indicator active" onclick="setSlide(0)"></span>
+                <span class="indicator" onclick="setSlide(1)"></span>
+                <span class="indicator" onclick="setSlide(2)"></span>
+                <span class="indicator" onclick="setSlide(3)"></span>
+            </div>
+            <button class="next" onclick="changeSlide(1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+                <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z" transform="translate(0 10) rotate(-90)" fill="#fff"></path>
+              </svg>
+            </button>
+        </div>
+    </div>
+
+    
+        
+    </div> -->
+
+   <!--  -->
+   <div id="SpaceCarousel">
+    <div class="carousel">
+      <div class="carousel-items">
+        <div class="item active">
+          <div class="details">
+            <div class="info-box">
+              <div class="title" data-aos="fade-right" data-aos-delay="150"  style="display: none;">STARSHIP</div>
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy vertical at Kennedy Space Center
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy takes off from Pad 39A at Kennedy Space Center
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy carries Arabsat-6A to orbit
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy's side boosters land at LZ-1 and LZ-2 at Cape Canaveral
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy lifts off from Pad 39A at Kennedy Space Center
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy lifts off from Pad 39A at Kennedy Space Center
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                All 27 Merlin engines lit on Falcon Heavy
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy lifts off from Pad 39A at Kennedy Space Center
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy lifts off from Pad 39A at Kennedy Space Center
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="details">
+            <div class="info-box">
+              <div class="description" data-aos="fade-right" data-aos-delay="200">
+                Falcon Heavy's side boosters land at LZ-1 and LZ-2 at Cape Canaveral
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="previous" onclick="navigateSlide(-1)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+            <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z" transform="translate(6) rotate(90)" fill="#fff"></path>
+          </svg>
+        </button>
+        <!-- <div class="dots">
+          <span class="dot active" onclick="setActiveSlide(0)"></span>
+          <span class="dot" onclick="setActiveSlide(1)"></span>
+          <span class="dot" onclick="setActiveSlide(2)"></span>
+          <span class="dot" onclick="setActiveSlide(3)"></span>
+          <span class="dot" onclick="setActiveSlide(4)"></span>
+          <span class="dot" onclick="setActiveSlide(5)"></span>
+          <span class="dot" onclick="setActiveSlide(6)"></span>
+          <span class="dot" onclick="setActiveSlide(7)"></span>
+          <span class="dot" onclick="setActiveSlide(8)"></span>
+          <span class="dot" onclick="setActiveSlide(9)"></span>
+          <span class="dot" onclick="setActiveSlide(10)"></span>
+        </div> -->
+        <button class="nextt" onclick="navigateSlide(1)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" aria-hidden="true">
+            <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z" transform="translate(0 10) rotate(-90)" fill="#fff"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+<!--  -->
+
+
+
+
+    <div id="d">
+        <section class="sec-5">
+            <div class="div2" data-aos="fade-right" data-aos-delay="200">
+                <div data-aos="fade-right" data-aos-delay="250" class="c1">Hi, I'm </div>
+                <div data-aos="fade-right" data-aos-delay="300" class="c2">Zels Sorathiya</div>
+                <div data-aos="fade-right" data-aos-delay="350" class="c3">WEB DEVELOPER</div>
+                <div data-aos="fade-right" data-aos-delay="400" class="c4">I specialize in crafting websites that combine functionality with elegant design. I enjoy creating seamless digital experiences and am always excited to collaborate on innovative projects. Feel free to connect and explore new opportunities!</div>
+                <div data-aos="fade-right" data-aos-delay="450" class="c5"><a href="https://zelssorathiya2615.github.io/Zels-Sorathiya/" target="_blank">PORTFOLIO</a></div>
+                <div class="icons" data-aos="fade-right" data-aos-delay="500">
+                    <a href="https://github.com/zelssorathiya2615" target="_blank" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/zels-sorathiya-4a0751319/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/zels_sorathiya" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:sorathiyazels@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="form-container" data-aos="fade-left" data-aos-delay="200">
+                <form action="https://formspree.io/f/xdknkerz" method="POST" id="my-form">
+    
+                    <div class="form-group">
+                        <label for="firstName">Name</label>
+                        <input type="text" name="firstName" id="firstName" required="required">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required="required">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" required="required"></textarea>
+                    </div>
+    
+                    <button type="submit">SUBMIT</button>
+                    <h1 id="status"></h1>
+                </form>
+                
+            </div>
+            <!-- <div id="status"></div> -->
+            
+        </section>
+    
+    </div>
+
+    <div class="foot-mob" id="Contact">&copy; 2024 <span>ZELS</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <script>
+    let isHolding = false; // Prevent repeated execution for the same section
+
+// Target the specific section
+const targetSection = document.getElementById('Home');
+
+// Function to "stick" to the target section for 2 seconds
+function holdScrollAtSection(entry) {
+    if (entry.isIntersecting && !isHolding) {
+        isHolding = true; // Prevent multiple triggers
+
+        // Smooth scroll to the section
+        targetSection.scrollIntoView({ behavior: "smooth" });
+
+        // Hold the scroll position for 2 seconds
+        setTimeout(() => {
+            isHolding = false; // Allow normal scrolling after 2 seconds
+        }, 10000);
+    }
+}
+
+// Create an IntersectionObserver for the specific section
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.target === targetSection) {
+            holdScrollAtSection(entry);
+        }
+    });
+}, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+// Start observing the target section
+observer.observe(targetSection);
+
+    </script> -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+    <script>
+        var form = document.getElementById("my-form");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                status.innerHTML = "Thanks for your submission!";
+                form.reset()
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
+
+    <script>
+      AOS.init();
+    </script>
+
+
+    <script>
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        const content = document.getElementById('content');
+        
+        preloader.style.display = 'none';
+        content.style.display = 'block';
+    }, 1200);   
+});
+// put here 1200
+    </script>
+
+
+    <script>
+// script.js
+let lastScrollTop = 0;
+const navbar = document.querySelector('.nav');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const links = document.getElementsByClassName('.links')
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        navbar.style.top = '-100px';
+        // links.style.display = '';
+
+    } else {
+        // Scrolling up
+        navbar.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+});
+        
+    </script>
+
+
+    <!-- <script>
+        const track = document.getElementById("image-track");
+
+const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+
+const handleOnUp = () => {
+  track.dataset.mouseDownAt = "0";  
+  track.dataset.prevPercentage = track.dataset.percentage;
+}
+
+const handleOnMove = e => {
+  if(track.dataset.mouseDownAt === "0") return;
+  
+  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+        maxDelta = window.innerWidth / 2;
+  
+  const percentage = (mouseDelta / maxDelta) * -100,
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+  
+  track.dataset.percentage = nextPercentage;
+  
+  track.animate({
+    transform: `translate(${nextPercentage}%, -50%)`
+  }, { duration: 1200, fill: "forwards" });
+  
+  for(const image of track.getElementsByClassName("image")) {
+    image.animate({
+      objectPosition: `${100 + nextPercentage}% center`
+    }, { duration: 1200, fill: "forwards" });
+  }
+}
+
+/* -- Had to add extra lines for touch events -- */
+
+window.onmousedown = e => handleOnDown(e);
+
+window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+window.onmouseup = e => handleOnUp(e);
+
+window.ontouchend = e => handleOnUp(e.touches[0]);
+
+window.onmousemove = e => handleOnMove(e);
+
+window.ontouchmove = e => handleOnMove(e.touches[0]);
+    </script> -->
+
+
+
+    <script>
+        window.addEventListener('scroll', function() {
+    var checkbox = document.getElementById('nav-toggle');
+    var scrollPosition = window.scrollY;
+    var triggerPosition = 100000000000000000;
+
+    if (scrollPosition >= triggerPosition) {
+        checkbox.checked = true;
+    } else {
+        checkbox.checked = false;
+    }
+});
+        
+    </script>
+    
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    
+    <script>
+        // Initialize the animation when DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollme = document.querySelector(".scrollme");
+
+  if (scrollme) {
+    // GSAP animation for the `.scrollme` element
+    gsap.fromTo(
+      scrollme,
+      { autoAlpha: 0, y: -40 }, // Initial state
+      {
+        autoAlpha: 1,           // Fade in
+        y: -30,                 // Slight upward bounce
+        repeat: -1,             // Infinite loop
+        yoyo: true,             // Alternate directions
+        ease: "power2.inOut",   // Smooth easing
+        duration: 1.5           // Duration of one cycle
+      }
+    );
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollme = document.querySelector(".scrollme2");
+
+  if (scrollme) {
+    // GSAP animation for the `.scrollme` element
+    gsap.fromTo(
+      scrollme,
+      { autoAlpha: 0, y: -40 }, // Initial state
+      {
+        autoAlpha: 1,           // Fade in
+        y: -30,                 // Slight upward bounce
+        repeat: -1,             // Infinite loop
+        yoyo: true,             // Alternate directions
+        ease: "power2.inOut",   // Smooth easing
+        duration: 1.5           // Duration of one cycle
+      }
+    );
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollme = document.querySelector(".scrollme3");
+
+  if (scrollme) {
+    // GSAP animation for the `.scrollme` element
+    gsap.fromTo(
+      scrollme,
+      { autoAlpha: 0, y: -40 }, // Initial state
+      {
+        autoAlpha: 1,           // Fade in
+        y: -30,                 // Slight upward bounce
+        repeat: -1,             // Infinite loop
+        yoyo: true,             // Alternate directions
+        ease: "power2.inOut",   // Smooth easing
+        duration: 1.5           // Duration of one cycle
+      }
+    );
+  }
+});
+
+    </script>
+
+<script>
+  let currentSlide = 0;
+
+  // Add this function to initialize the slider
+function initializeSlider() {
+  const slides = document.querySelectorAll('.slide');
+  slides[currentSlide].classList.add('active');
+  document.querySelector('.slides').style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+  updateIndicators();
+  updateButtonColors(); // Set initial button colors
+}
+
+
+
+function changeSlide(direction) {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  if (direction === -1 && currentSlide === 0) {
+      // Do not move to the last slide if already at the first slide
+      return;
+  }
+
+  if (direction === 1 && currentSlide === totalSlides - 1) {
+      // Do not move to the first slide if already at the last slide
+      return;
+  }
+
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+  slides[currentSlide].classList.add('active');
+  document.querySelector('.slides').style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+  updateIndicators();
+  updateButtonColors(); // Update button colors
+}
+
+function setSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  slides[currentSlide].classList.remove('active');
+  currentSlide = index;
+  slides[currentSlide].classList.add('active');
+  document.querySelector('.slides').style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+  updateIndicators();
+  updateButtonColors(); // Update button colors
+}
+
+function updateButtonColors() {
+  const slides = document.querySelectorAll('.slide'); // Ensure slides are selected here
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  const prevSvgPath = prevButton.querySelector('svg path');
+  const nextSvgPath = nextButton.querySelector('svg path');
+
+  // Reset colors
+  prevSvgPath.setAttribute('opacity', '1'); // Default opacity for prev button
+  nextSvgPath.setAttribute('opacity', '1'); // Default opacity for next button
+
+  if (currentSlide === 0) {
+      // Change opacity for prev button when on the first slide
+      prevSvgPath.setAttribute('opacity', '0.25'); // Light black
+  }
+
+  if (currentSlide === slides.length - 1) {
+      // Change opacity for next button when on the last slide
+      nextSvgPath.setAttribute('opacity', '0.25'); // Light black
+  }
+}
+
+  function setSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      slides[currentSlide].classList.remove('active');
+      currentSlide = index;
+      slides[currentSlide].classList.add('active');
+      document.querySelector('.slides').style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+      updateIndicators();
+  }
+
+  function updateIndicators() {
+      const indicators = document.querySelectorAll('.indicator');
+      indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentSlide);
+      });
+  }
+
+  // Call this function to initialize the slider on page load
+initializeSlider();
+</script>
+
+<script>
+    let activeSlide = 0;
+
+function initializeCarousel() {
+  const items = document.querySelectorAll('.item');
+  items[activeSlide].classList.add('active');
+  document.querySelector('.carousel-items').style.transform = `translateX(${-activeSlide * 100}%)`;
+  updateDots();
+  updateControlButtons();
+}
+
+function navigateSlide(direction) {
+  const items = document.querySelectorAll('.item');
+  const totalItems = items.length;
+
+  if ((direction === -1 && activeSlide === 0) || (direction === 1 && activeSlide === totalItems - 1)) {
+    return;
+  }
+
+  items[activeSlide].classList.remove('active');
+  activeSlide = (activeSlide + direction + totalItems) % totalItems;
+  items[activeSlide].classList.add('active');
+  document.querySelector('.carousel-items').style.transform = `translateX(${-activeSlide * 100}%)`;
+  updateDots();
+  updateControlButtons();
+}
+
+function setActiveSlide(index) {
+  const items = document.querySelectorAll('.item');
+  items[activeSlide].classList.remove('active');
+  activeSlide = index;
+  items[activeSlide].classList.add('active');
+  document.querySelector('.carousel-items').style.transform = `translateX(${-activeSlide * 100}%)`;
+  updateDots();
+  updateControlButtons();
+}
+
+function updateDots() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === activeSlide);
+  });
+}
+
+function updateControlButtons() {
+  const previousButton = document.querySelector('.previous svg path');
+  const nextButton = document.querySelector('.nextt svg path');
+
+  previousButton.setAttribute('opacity', activeSlide === 0 ? '0.25' : '1');
+  nextButton.setAttribute('opacity', activeSlide === document.querySelectorAll('.item').length - 1 ? '0.25' : '1');
+}
+
+document.addEventListener('DOMContentLoaded', initializeCarousel);
+
+</script>
+
+
+<script>
+  const seaLevelButton = document.getElementById('seaLevelButton');
+  const vacuumButton = document.getElementById('vacuumButton');
+  const seaLevelcontentt = document.getElementById('seaLevelcontentt');
+  const vacuumcontentt = document.getElementById('vacuumcontentt');
+  const backgroundDiv = document.getElementById('backgroundDiv');
+
+  // Function to update background image of the full-height div
+  const updateBackgroundDiv = (mode) => {
+      if (mode === 'seaLevel') {
+          backgroundDiv.style.backgroundImage = "url('https://www.spacex.com/static/images/falcon-9/desktop/Merlin.jpg')"; // Replace with your sea level background image
+      } else if (mode === 'vacuum') {
+          backgroundDiv.style.backgroundImage = "url('https://www.spacex.com/static/images/falcon-9/desktop/MerlinVac.jpg')"; // Replace with your vacuum background image
+      }
+  };
+
+  seaLevelButton.addEventListener('click', () => {
+      seaLevelcontentt.classList.add('active');
+      vacuumcontentt.classList.remove('active');
+      seaLevelButton.classList.add('active');
+      vacuumButton.classList.remove('active');
+      updateBackgroundDiv('seaLevel');
+  });
+
+  vacuumButton.addEventListener('click', () => {
+      vacuumcontentt.classList.add('active');
+      seaLevelcontentt.classList.remove('active');
+      vacuumButton.classList.add('active');
+      seaLevelButton.classList.remove('active');
+      updateBackgroundDiv('vacuum');
+  });
+
+  // Set initial background on page load
+  updateBackgroundDiv('seaLevel');
+</script>
+
+
+<script>
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
+
+</body>
+</html>
