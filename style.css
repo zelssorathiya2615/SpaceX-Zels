@@ -509,28 +509,29 @@ button svg{
 }
 
 .slide:nth-child(1){
-    background: url(/./img/Screenshot2.webp);
+    background: url(./img/Screenshot2.webp);
+    /* background: url(/./img/Screenshot2.webp); */
     background-repeat: none;
     background-size: cover;
     background-position: center;
 }
 
 .slide:nth-child(2){
-    background: url(/./img/WebsiteFHFairings_Lines_Desktop.jpg);
+    background: url(./img/WebsiteFHFairings_Lines_Desktop.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
 }
 
 .slide:nth-child(3){
-    background: url(/./img/DragonTrunk_Lines_Desktop.jpg);
+    background: url(./img/DragonTrunk_Lines_Desktop.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
 }
 
 .slide:nth-child(4){
-    background: url(/./img/WebsiteStarship_Render_Desktop.jpg);
+    background: url(./img/WebsiteStarship_Render_Desktop.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
