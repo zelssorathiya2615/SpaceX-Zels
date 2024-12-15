@@ -187,6 +187,7 @@ nav .links a {
     position: relative;
     /* text-decoration: none; */
     /* color: #fff; */
+    white-space: nowrap;
     transition: color 0.3s ease;
 }
 nav .links a::before{
@@ -230,7 +231,7 @@ nav .icon-burger .line {
 }
 
 #Home {
-    background-image: url(https://www.spacex.com/static/images/backgrounds/fh_feature.jpg);
+    background-image: url(https://www.spacex.com/vehicles/starship/assets/images/Starhip_website-crop20230126_dji_0199_01.jpg);
     /* -webkit-filter: grayscale(100%); */
     height: 100vh;
     width: 100%;
@@ -574,7 +575,7 @@ button svg{
 }
 
 .slide:nth-child(1){
-    background: url(https://www.spacex.com/static/images/falcon-heavy/desktop/WebsiteFHFairings_Lines_Desktop.jpg);
+    background: url(https://www.spacex.com/static/images/backgrounds/WebsiteStarshipStack_Render_Desktop.jpg);
     background-repeat: none;
     background-size: cover;
     background-position: center;
@@ -687,129 +688,6 @@ td:not(.label) span{
 
 
 /* Responsive styles */
-@media (max-width: 1100px) {
-    .textvehicle{
-        font-family: 'D-DIN-MEDIUM';
-        font-size: 1.544529262086514vh;
-        margin-bottom: 8px;
-    }
-    .texthead{
-        font-family: 'D-DIN-BOLD';
-        font-size: 6.5251908396946565vh;
-        margin-bottom: 20px;
-        /* font-size:; */
-    }
-    .textdetails{
-        font-family: 'D-DIN-MEDIUM';
-        font-size: 17px;
-        letter-spacing: 1px;
-        line-height: 25px;
-        margin-bottom: 10px;
-    }
-    .textdetails1{
-        width: 100%;
-        font-family: 'D-DIN-MEDIUM';
-        text-align: justify;
-        font-size: 1.9083969465648856vh;
-        /* letter-spacing: 1px; */
-        line-height: 25px;
-        margin-bottom: 10px;
-        /* height: 15.267175572519085vh; */
-    }
-    .table-container {
-        /* padding-top: 0.035623409669211vh; */
-        display: flex-start;
-        /* height: 100vh; */
-        font-family: 'D-DIN-MEDIUM';
-    }
-    .table-container:nth-child(2) {
-        padding-top: 15.035623409669211vh;
-        display: flex-start;
-        /* height: 100vh; */
-        font-family: 'D-DIN-MEDIUM';
-    }
-    
-    table {
-        border-collapse: collapse;
-        width: 100%; /* Adjust the width to match the table */
-    }
-    
-    td {
-        padding: 20px 0px; /* Add padding for better spacing */
-        font-size: 1.9083969465648856vh;
-        text-align: left;
-        /* vertical-align: middle; Aligns the text vertically in the cell */
-    }
-    
-    td:not(.label){
-        color: #fff;
-        text-align: right;
-        font-size: 1.9083969465648856vh;
-        font-weight: 900;
-        border-bottom: 1px solid #444;
-    }
-    td:not(.label) span{
-        color: #868686;
-        text-decoration: none;
-        text-align: right;
-        font-size: 1.983969465648856vh;
-        font-weight: 900;
-        /* border-bottom: 1px solid #444; Bottom border only */
-    }
-
-    #seaLevelButton{
-        margin-right: 10px;
-    }
-    
-    .content {
-        flex-direction: column; /* Stack vertically on small screens */
-    }
-    .content .box:nth-child(2){
-        display: none;
-    }
-
-    .prev{
-        margin-left: 20px;
-    }
-    .next{
-        margin-right: 20px;
-    }
-    div.nav-container{
-        margin-bottom: 50px;
-    }
-    .box {
-        background-color: #d9ff0000; /* Blue background */
-        color: white; /* White text */
-        padding: 20px; /* Padding inside the box */
-        border-radius: 5px; /* Rounded corners */
-        flex: 1; /* Flex-grow to take equal space */
-        /* margin: 0 10px;  */
-       
-        /* margin-top: 25vh; */
-        /* text-align: justify; */
-        position: relative;
-        left: 0.288579795021962vw;
-        /* text-align: justify; */
-        /* padding: 20px 20px; */
-        align-items: center;
-        /* text-align: center; Center text */
-        /* margin-left: 50px; */
-        /* font-family: 'D-DIN-BOLD'; */
-    }
-    .texthead{
-        font-family: 'D-DIN-BOLD';
-        font-size: 25px;
-        margin-bottom: 20px;
-        /* font-size:; */
-    }
-    .textdetails{
-        font-family: 'D-DIN-MEDIUM';
-        font-size: 15px;
-        letter-spacing: 1px;
-        line-height: 25px;
-        margin-bottom: 10px;
-    }
-}
 
 /* SLIDER End */
 
@@ -1406,7 +1284,7 @@ button[type="submit"]:hover{
         opacity: 0;
     }
     ul.links{
-        background: none;
+        background: #000;
     } 
     .form-container{
         display: none;
@@ -1551,7 +1429,7 @@ button[type="submit"]:hover{
 @media only screen and (max-width: 700px){
     
     #Home {
-        background-image: url(/../img/f9_img.jpg);
+        background-image: url(https://www.spacex.com/vehicles/starship/assets/images/Starhip_website-crop20230126_dji_0199_MOBILE_01.jpg);
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
@@ -1679,6 +1557,202 @@ button[type="submit"]:hover{
 
     
 }
+@media (max-width: 1100px) {
+    .item:nth-child(1) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+        /* background-color: #333; */
+        background-image: url(https://www.spacex.com/static/images/falcon-heavy/FH_1_mobile.jpg);
+        /* background: url(/../img/F9_DM2_LAUNCH_3840x2560.jpg) no-repeat center center !important; */
+    }
+    
+    .item:nth-child(2) {
+        background-image: url(https://www.spacex.com/static/images/falcon-heavy/FH_2_mobile.jpg);
+    }
+    
+    .item:nth-child(3) {
+        background-image: url(https://www.spacex.com/static/images/falcon-heavy/FH_3_mobile.jpg);
+    }
+    
+    .item:nth-child(4) {
+        background: url(https://www.spacex.com/static/images/falcon-heavy/FH_4_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+     
+    .item:nth-child(5) {
+        background: url(https://www.spacex.com/static/images/falcon-heavy/FH_5_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+     
+    .item:nth-child(6) {
+        background: url(https://www.spacex.com/static/images/falcon-heavy/FH_6_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+     
+    .item:nth-child(7) {
+        background: url(https://www.spacex.com/static/images/falcon-heavy/FH_7_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+     
+    .item:nth-child(8) {
+        background: url(https://www.spacex.com/static/images/falcon-heavy/FH_8_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+     
+    .item:nth-child(9) {
+        background: url(https://www.spacex.com/static/images/falcon-heavy/FH_9_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+     
+    .item:nth-child(10) {
+        background: url(https://www.spacex.com/static/images/falcon-heavy/FH_10_mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .textvehicle{
+        font-family: 'D-DIN-MEDIUM';
+        font-size: 1.544529262086514vh;
+        margin-bottom: 8px;
+    }
+    .texthead{
+        font-family: 'D-DIN-BOLD';
+        font-size: 6.5251908396946565vh;
+        margin-bottom: 20px;
+        /* font-size:; */
+    }
+    .textdetails{
+        font-family: 'D-DIN-MEDIUM';
+        font-size: 17px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+    .textdetails1{
+        width: 100%;
+        font-family: 'D-DIN-MEDIUM';
+        text-align: justify;
+        font-size: 1.5083969465648856vh;
+        /* letter-spacing: 1px; */
+        line-height: 25px;
+        margin-bottom: 10px;
+        /* height: 15.267175572519085vh; */
+    }
+    .table-container {
+        
+        padding-top: 15.035623409669211vh;
+        /* padding-top: 0.035623409669211vh; */
+        display: flex-start;
+        /* height: 100vh; */
+        font-family: 'D-DIN-MEDIUM';
+    }
+    .table-container:nth-child(2) {
+        padding-top: 15.035623409669211vh;
+        display: flex-start;
+        /* height: 100vh; */
+        font-family: 'D-DIN-MEDIUM';
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%; /* Adjust the width to match the table */
+    }
+    
+    td {
+        padding: 20px 0px; /* Add padding for better spacing */
+        font-size: 1.5083969465648856vh;
+        text-align: left;
+        /* vertical-align: middle; Aligns the text vertically in the cell */
+    }
+    .slide td.label{
+        font-size: 1.5083969465648856vh;
+    } 
+    
+    td:not(.label){
+        color: #fff;
+        text-align: right;
+        font-size: 1.5083969465648856vh;
+        font-weight: 900;
+        /* border-bottom: 1px solid #444; */
+    }
+    td:not(.label) span{
+        color: #868686;
+        text-decoration: none;
+        text-align: right;
+        font-size: 1.5083969465648856vh;
+        font-weight: 900;
+        /* border-bottom: 1px solid #444; Bottom border only */
+    }
+
+    #seaLevelButton{
+        margin-right: 10px;
+    }
+    
+    .content {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+    .content .box:nth-child(2){
+        display: none;
+    }
+
+    .prev{
+        margin-left: 20px;
+    }
+    .next{
+        margin-right: 20px;
+    }
+    div.nav-container{
+        margin-bottom: 50px;
+    }
+    .box {
+        background-color: #d9ff0000; /* Blue background */
+        color: white; /* White text */
+        padding: 20px; /* Padding inside the box */
+        border-radius: 5px; /* Rounded corners */
+        flex: 1; /* Flex-grow to take equal space */
+        /* margin: 0 10px;  */
+       
+        /* margin-top: 25vh; */
+        /* text-align: justify; */
+        position: relative;
+        left: 0.288579795021962vw;
+        /* text-align: justify; */
+        /* padding: 20px 20px; */
+        align-items: center;
+        /* text-align: center; Center text */
+        /* margin-left: 50px; */
+        /* font-family: 'D-DIN-BOLD'; */
+    }
+    .texthead{
+        font-family: 'D-DIN-BOLD';
+        font-size: 25px;
+        margin-bottom: 20px;
+        /* font-size:; */
+    }
+    .textdetails{
+        font-family: 'D-DIN-MEDIUM';
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+}
+
 
 /*scrollbar*/
 ::-webkit-scrollbar {
@@ -1696,3 +1770,4 @@ button[type="submit"]:hover{
 ::-webkit-scrollbar-track {
     background-color: #000; 
 }
+
