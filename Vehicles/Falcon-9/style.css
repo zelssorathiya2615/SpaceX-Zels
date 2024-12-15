@@ -187,6 +187,7 @@ nav .links a {
     position: relative;
     /* text-decoration: none; */
     /* color: #fff; */
+    white-space: nowrap;
     transition: color 0.3s ease;
 }
 nav .links a::before{
@@ -1414,7 +1415,7 @@ button[type="submit"]:hover{
         opacity: 0;
     }
     ul.links{
-        background: none;
+        background: #000;
     } 
     .form-container{
         display: none;
@@ -1559,7 +1560,7 @@ button[type="submit"]:hover{
 @media only screen and (max-width: 700px){
     
     #Home {
-        background-image: url(/../img/f9_img.jpg);
+        background-image: url(https://www.spacex.com/static/images/backgrounds/f9_feature.jpg);
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
