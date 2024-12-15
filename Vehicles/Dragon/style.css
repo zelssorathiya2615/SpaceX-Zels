@@ -187,6 +187,7 @@ nav .links a {
     position: relative;
     /* text-decoration: none; */
     /* color: #fff; */
+    white-space: nowrap;
     transition: color 0.3s ease;
 }
 nav .links a::before{
@@ -684,10 +685,18 @@ td:not(.label) span{
     width: 40%; /* Make the label column wider */
     border-bottom: 0.5px solid #444; /* Bottom border for labels */
 }
-
+.item:nth-child(1){
+    background: url(https://www.spacex.com/static/images/dragon/refresh/DRAGON_DM2_LC39A_3840x2560.jpg);
+}
+.item:nth-child(2){
+    background: url(https://www.spacex.com/static/images/dragon/refresh/DRAGON_DRAGON+F9_3840x2560.jpg);
+}
 
 /* Responsive styles */
 @media (max-width: 1100px) {
+    .item:nth-child(1){
+        background: url(https://www.spacex.com/static/images/dragon/refresh/DRAGON_DM2_LC39A_800x1200_Mobile.jpg);
+    }
     .textvehicle{
         font-family: 'D-DIN-MEDIUM';
         font-size: 1.544529262086514vh;
@@ -809,6 +818,7 @@ td:not(.label) span{
         line-height: 25px;
         margin-bottom: 10px;
     }
+    
 }
 
 /* SLIDER End */
@@ -993,28 +1003,28 @@ button svg {
 
 
 .item:nth-child(2) {
-    background: url(https://www.spacex.com/static/images/falcon-heavy/FH_2.jpg);
+    background: url(https://www.spacex.com/static/images/dragon/refresh/DRAGON_DRAGON+F9_3840x2560.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .item:nth-child(3) {
-    background: url(https://www.spacex.com/static/images/falcon-heavy/FH_3.jpg);
+    background: url(https://www.spacex.com/static/images/dragon/refresh/DRAGON_DRAGON+ISS_3840x2025.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .item:nth-child(4) {
-    background: url(https://www.spacex.com/static/images/falcon-heavy/FH_4.jpg);
+    background: url(https://www.spacex.com/static/images/dragon/refresh/DRAGON_CRS-22_3840x2560_Desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
  
 .item:nth-child(5) {
-    background: url(https://www.spacex.com/static/images/falcon-heavy/FH_5.jpg);
+    background: url(https://www.spacex.com/static/images/dragon/DR_6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1377,7 +1387,7 @@ button[type="submit"]:hover{
         opacity: 0;
     }
     ul.links{
-        background: none;
+        background: #000;
     } 
     .form-container{
         display: none;
@@ -1522,7 +1532,7 @@ button[type="submit"]:hover{
 @media only screen and (max-width: 700px){
     
     #Home {
-        background-image: url(/../img/f9_img.jpg);
+        background-image: url(https://www.spacex.com/static/images/backgrounds/dragon_feature_mobile.jpg);
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
