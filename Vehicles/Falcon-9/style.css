@@ -575,7 +575,7 @@ button svg{
 }
 
 .slide:nth-child(1){
-    background: url(../img/Screenshot2.webp);
+    background: url(../../img/Screenshot2.webp);
     background-repeat: none;
     background-size: cover;
     background-position: center;
